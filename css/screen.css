@@ -1,0 +1,515 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+@font-face {
+  font-family: "proxima-nova";
+  src: url("../fonts/ProximaNova-Light.otf") format("opentype"); }
+
+/* line 12, ../sass/screen.scss */
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: none; }
+
+/* line 20, ../sass/screen.scss */
+.clear {
+  overflow: hidden;
+  *zoom: 1; }
+
+/* line 24, ../sass/screen.scss */
+body, html {
+  height: 100% !important;
+  width: 768px;
+  -webkit-user-select: none;
+  overflow: hidden;
+  display: block;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial; }
+
+/* line 33, ../sass/screen.scss */
+#bottom-panel {
+  background: #3A3939;
+  height: 650px;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  -webkit-transform: translate(0, 500px);
+  -webkit-transition: all 0.4s ease-in-out; }
+  /* line 42, ../sass/screen.scss */
+  #bottom-panel .icon-bar {
+    background: #4A4A4A;
+    height: 150px;
+    margin-bottom: 20px;
+    position: relative; }
+    /* line 47, ../sass/screen.scss */
+    #bottom-panel .icon-bar div {
+      -webkit-transition: all 0.2s ease-in-out; }
+      /* line 49, ../sass/screen.scss */
+      #bottom-panel .icon-bar div.tapped {
+        -webkit-transform: scale(0.9); }
+    /* line 53, ../sass/screen.scss */
+    #bottom-panel .icon-bar .expand {
+      height: 100%;
+      width: 125px;
+      margin: 0 auto;
+      background: black;
+      cursor: pointer;
+      background: url(../images/menu.svg) no-repeat 50% 50%; }
+    /* line 61, ../sass/screen.scss */
+    #bottom-panel .icon-bar .left {
+      height: 100%;
+      width: 125px;
+      left: 0;
+      position: absolute;
+      background: black;
+      cursor: pointer;
+      background: url(../images/arrow2.svg) no-repeat 50% 50%; }
+    /* line 70, ../sass/screen.scss */
+    #bottom-panel .icon-bar .right {
+      height: 100%;
+      width: 125px;
+      right: 0;
+      top: 0;
+      position: absolute;
+      background: black;
+      cursor: pointer;
+      background: url(../images/arrow.svg) no-repeat 50% 50%; }
+  /* line 81, ../sass/screen.scss */
+  #bottom-panel.active {
+    -webkit-transform: translate(0, 0); }
+  /* line 84, ../sass/screen.scss */
+  #bottom-panel input {
+    width: 90%;
+    margin: 0 5%;
+    -webkit-user-select: text;
+    background: #4a4a4a url(../images/search.svg) no-repeat 8px 50%;
+    background-size: 45px 45px;
+    padding: 10px 10px 10px 62px;
+    font-size: 2em;
+    color: #f6f6f6;
+    border: none;
+    -webkit-border-radius: 4px; }
+
+/* line 98, ../sass/screen.scss */
+#recipe-panel-progress {
+  text-align: center;
+  width: 100%; }
+  /* line 101, ../sass/screen.scss */
+  #recipe-panel-progress .progress-circle {
+    background: rgba(255, 255, 255, 0.5);
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius: 10px;
+    margin: 0 0.2em;
+    display: inline-block; }
+    /* line 108, ../sass/screen.scss */
+    #recipe-panel-progress .progress-circle.active {
+      background: white; }
+
+/* line 114, ../sass/screen.scss */
+#recipe-list-wrapper {
+  height: 390px;
+  width: 768px;
+  overflow-y: hidden;
+  overflow-x: scroll; }
+  /* line 119, ../sass/screen.scss */
+  #recipe-list-wrapper #recipe-list {
+    width: 5000px;
+    overflow-x: scroll; }
+  /* line 123, ../sass/screen.scss */
+  #recipe-list-wrapper .recipe-pane {
+    overflow: hidden;
+    height: 400px;
+    display: inline-block;
+    float: left;
+    width: 768px;
+    position: relative; }
+  /* line 132, ../sass/screen.scss */
+  #recipe-list-wrapper li {
+    display: inline-block;
+    float: left;
+    width: 25%;
+    height: 150px;
+    text-align: center;
+    color: #f6f6f6;
+    margin: 1.2em 0;
+    padding: 0 1.8em;
+    -webkit-backface-visibility: hidden; }
+    /* line 142, ../sass/screen.scss */
+    #recipe-list-wrapper li span {
+      font-size: 1em;
+      font-weight: lighter;
+      line-height: 1.4; }
+    /* line 147, ../sass/screen.scss */
+    #recipe-list-wrapper li svg {
+      width: 110px;
+      height: 110px;
+      margin-bottom: .2em;
+      -webkit-backface-visibility: hidden;
+      -webkit-transition: all 0.1s ease-in-out; }
+    /* line 155, ../sass/screen.scss */
+    #recipe-list-wrapper li.tapped svg {
+      -webkit-backface-visibility: hidden;
+      -webkit-transform: scale(0.9); }
+
+/* line 165, ../sass/screen.scss */
+#full-page {
+  text-align: center;
+  padding-bottom: 150px;
+  height: 900px;
+  overflow-y: hidden; }
+  /* line 167, ../sass/screen.scss */
+  #full-page #app-icon {
+    width: 500px;
+    height: 500px;
+    margin: 10em 0; }
+  /* line 175, ../sass/screen.scss */
+  #full-page .recipe-wrapper {
+    width: 10000px; }
+  /* line 178, ../sass/screen.scss */
+  #full-page .recipe {
+    padding: 5em 4em;
+    margin: 0 4em;
+    text-align: center;
+    display: inline-block;
+    float: left;
+    width: 768px;
+    height: 900px;
+    overflow: hidden;
+    *zoom: 1;
+    color: #999;
+    overflow: hidden;
+    line-height: 1.4;
+    -webkit-transition: all 0.8s ease-in-out;
+    -webkit-transform: translate(0, 0);
+    -webkit-backface-visibility: hidden; }
+    /* line 187, ../sass/screen.scss */
+    #full-page .recipe .recipe-inner {
+      height: auto;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      *zoom: 1; }
+    /* line 199, ../sass/screen.scss */
+    #full-page .recipe.goleft {
+      -webkit-transform: translate(-768px, 0); }
+    /* line 202, ../sass/screen.scss */
+    #full-page .recipe.active {
+      -webkit-transform: translate(0, -830px); }
+    /* line 205, ../sass/screen.scss */
+    #full-page .recipe .down {
+      background: url(../images/down.svg);
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 4em;
+      -webkit-transition: all 0.1s ease-in-out;
+      -webkit-transform: scale(1);
+      -webkit-backface-visibility: hidden; }
+      /* line 213, ../sass/screen.scss */
+      #full-page .recipe .down.tapped {
+        -webkit-transform: scale(0.9); }
+    /* line 217, ../sass/screen.scss */
+    #full-page .recipe svg {
+      width: 500px;
+      height: 500px; }
+    /* line 221, ../sass/screen.scss */
+    #full-page .recipe h1 {
+      margin-top: 1em;
+      margin-bottom: 1em;
+      font-size: 3em;
+      color: #ccc;
+      font-weight: lighter; }
+    /* line 228, ../sass/screen.scss */
+    #full-page .recipe .left-col {
+      width: 30%;
+      float: left;
+      text-align: left;
+      padding-top: 2em;
+      color: #aaa; }
+      /* line 234, ../sass/screen.scss */
+      #full-page .recipe .left-col strong {
+        color: #666; }
+    /* line 238, ../sass/screen.scss */
+    #full-page .recipe .right-col {
+      text-align: left;
+      width: 60%;
+      height: 980px;
+      float: right;
+      padding-top: 2em; }
+    /* line 245, ../sass/screen.scss */
+    #full-page .recipe h2 {
+      font-size: 1.6em;
+      color: #777;
+      margin-bottom: 1em; }
+
+@media (max-width: 400px) {
+  /* line 254, ../sass/screen.scss */
+  #bottom-panel {
+    background: #3A3939;
+    height: 460px;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    -webkit-transform: translate(0, 385px);
+    -webkit-transition: all 0.4s ease-in-out; }
+    /* line 263, ../sass/screen.scss */
+    #bottom-panel .icon-bar {
+      background: #4A4A4A;
+      height: 75px;
+      margin-bottom: 20px;
+      position: relative; }
+      /* line 268, ../sass/screen.scss */
+      #bottom-panel .icon-bar div {
+        -webkit-transition: all 0.2s ease-in-out; }
+        /* line 270, ../sass/screen.scss */
+        #bottom-panel .icon-bar div.tapped {
+          -webkit-transform: scale(0.9); }
+      /* line 274, ../sass/screen.scss */
+      #bottom-panel .icon-bar .expand {
+        height: 100%;
+        width: 125px;
+        margin: 0 auto;
+        background: black;
+        cursor: pointer;
+        background: url(../images/menu.svg) no-repeat 50% 50%;
+        background-size: 50px 50px; }
+      /* line 283, ../sass/screen.scss */
+      #bottom-panel .icon-bar .left {
+        height: 100%;
+        width: 125px;
+        left: 0;
+        position: absolute;
+        background: black;
+        cursor: pointer;
+        background: url(../images/arrow2.svg) no-repeat 50% 50%;
+        background-size: 35px 35px; }
+      /* line 293, ../sass/screen.scss */
+      #bottom-panel .icon-bar .right {
+        height: 100%;
+        width: 125px;
+        right: 0px;
+        top: 0;
+        position: absolute;
+        background: black;
+        cursor: pointer;
+        background: url(../images/arrow.svg) no-repeat 50% 50%;
+        background-size: 35px 35px; }
+    /* line 305, ../sass/screen.scss */
+    #bottom-panel.active {
+      -webkit-transform: translate(0, 0); }
+    /* line 308, ../sass/screen.scss */
+    #bottom-panel input {
+      width: 90%;
+      margin: 0 5%;
+      background: #4a4a4a url(../images/search.svg) no-repeat 8px 50%;
+      background-size: 35px 35px;
+      padding: 10px 10px 10px 62px;
+      font-size: 1em;
+      color: #f6f6f6;
+      border: none;
+      -webkit-border-radius: 4px; }
+
+  /* line 321, ../sass/screen.scss */
+  #recipe-panel-progress {
+    text-align: center;
+    width: 100%; }
+    /* line 324, ../sass/screen.scss */
+    #recipe-panel-progress .progress-circle {
+      background: rgba(255, 255, 255, 0.5);
+      width: 10px;
+      height: 10px;
+      -webkit-border-radius: 10px;
+      margin: 0 0.2em;
+      display: inline-block; }
+      /* line 331, ../sass/screen.scss */
+      #recipe-panel-progress .progress-circle.active {
+        background: white; }
+
+  /* line 337, ../sass/screen.scss */
+  #recipe-list-wrapper {
+    height: 292px;
+    width: 320px;
+    overflow-y: hidden;
+    overflow-x: scroll; }
+    /* line 342, ../sass/screen.scss */
+    #recipe-list-wrapper #recipe-list {
+      width: 5000px;
+      overflow-x: scroll; }
+    /* line 346, ../sass/screen.scss */
+    #recipe-list-wrapper .recipe-pane {
+      overflow: hidden;
+      height: 400px;
+      display: inline-block;
+      float: left;
+      width: 320px;
+      position: relative; }
+    /* line 355, ../sass/screen.scss */
+    #recipe-list-wrapper li {
+      display: inline-block;
+      float: left;
+      width: 33%;
+      height: 74px;
+      text-align: center;
+      color: #f6f6f6;
+      margin: 1.8em 0;
+      padding: 0 0.6em;
+      -webkit-backface-visibility: hidden; }
+      /* line 365, ../sass/screen.scss */
+      #recipe-list-wrapper li span {
+        font-size: .8em;
+        font-weight: lighter;
+        line-height: 1.4; }
+      /* line 370, ../sass/screen.scss */
+      #recipe-list-wrapper li svg {
+        width: 65px;
+        height: 65px;
+        margin-bottom: .2em;
+        -webkit-backface-visibility: hidden;
+        -webkit-transition: all 0.1s ease-in-out; }
+      /* line 378, ../sass/screen.scss */
+      #recipe-list-wrapper li.tapped svg {
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: scale(0.9); }
+
+  /* line 388, ../sass/screen.scss */
+  #full-page {
+    text-align: center;
+    width: 320px !important;
+    padding-bottom: 150px;
+    height: 900px;
+    overflow: hidden; }
+    /* line 391, ../sass/screen.scss */
+    #full-page #app-icon {
+      width: 250px;
+      height: 250px;
+      margin: 5em 0; }
+    /* line 399, ../sass/screen.scss */
+    #full-page .recipe {
+      padding: 2em;
+      text-align: center;
+      color: #999;
+      overflow: hidden;
+      line-height: 1.4;
+      -webkit-transition: all 0.8s ease-in-out;
+      -webkit-transform: translate(0, 0);
+      -webkit-backface-visibility: hidden;
+      display: inline-block;
+      float: left;
+      width: 320px;
+      height: 425px;
+      overflow: hidden;
+      *zoom: 1; }
+      /* line 414, ../sass/screen.scss */
+      #full-page .recipe .recipe-inner {
+        height: auto;
+        width: 100%;
+        position: relative;
+        padding-bottom: 6em;
+        overflow: hidden;
+        *zoom: 1; }
+      /* line 421, ../sass/screen.scss */
+      #full-page .recipe.active {
+        -webkit-transform: translate(0, -410px); }
+      /* line 424, ../sass/screen.scss */
+      #full-page .recipe .down {
+        background: url(../images/down.svg);
+        width: 72px;
+        height: 72px;
+        margin: 0 auto 4em;
+        -webkit-transition: all 0.1s ease-in-out;
+        -webkit-transform: scale(1);
+        -webkit-backface-visibility: hidden; }
+        /* line 432, ../sass/screen.scss */
+        #full-page .recipe .down.tapped {
+          -webkit-transform: scale(0.9); }
+      /* line 436, ../sass/screen.scss */
+      #full-page .recipe svg {
+        width: 200px;
+        height: 200px; }
+      /* line 440, ../sass/screen.scss */
+      #full-page .recipe h1 {
+        margin-top: .5em;
+        margin-bottom: .5em;
+        font-size: 1.6em;
+        line-height: 1.2;
+        color: #ccc;
+        font-weight: lighter; }
+      /* line 448, ../sass/screen.scss */
+      #full-page .recipe .left-col {
+        width: 100%;
+        float: left;
+        text-align: left;
+        color: #aaa;
+        margin-bottom: 2em; }
+        /* line 454, ../sass/screen.scss */
+        #full-page .recipe .left-col strong {
+          color: #666; }
+      /* line 458, ../sass/screen.scss */
+      #full-page .recipe .right-col {
+        text-align: left;
+        width: 100%;
+        float: right;
+        height: auto; }
+      /* line 464, ../sass/screen.scss */
+      #full-page .recipe h2 {
+        font-size: 1.6em;
+        color: #777;
+        margin-bottom: 1em; } }

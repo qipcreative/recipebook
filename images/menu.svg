@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="112px" height="68px" viewBox="0 0 112 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>menu</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page 1" fill="#D8D8D8" fill-rule="evenodd">
+        <g id="Artboard 2">
+            <path d="M4.00263463,0 C1.79204057,0 0,1.78883037 0,3.99620271 L0,12.0037973 C0,14.2108391 1.78186632,16 4.00263463,16 L107.997365,16 C110.207959,16 112,14.2111696 112,12.0037973 L112,3.99620271 C112,1.78916089 110.218134,0 107.997365,0 L4.00263463,0 Z M4.00263463,0" id="Rectangle 3" fill="#FFFFFF"></path>
+            <path d="M4.00263463,26 C1.79204057,26 0,27.7888304 0,29.9962027 L0,38.0037973 C0,40.2108391 1.78186632,42 4.00263463,42 L107.997365,42 C110.207959,42 112,40.2111696 112,38.0037973 L112,29.9962027 C112,27.7891609 110.218134,26 107.997365,26 L4.00263463,26 Z M4.00263463,26" id="Rectangle 3" fill="#FFFFFF"></path>
+            <path d="M4.00263463,52 C1.79204057,52 0,53.7888304 0,55.9962027 L0,64.0037973 C0,66.2108391 1.78186632,68 4.00263463,68 L107.997365,68 C110.207959,68 112,66.2111696 112,64.0037973 L112,55.9962027 C112,53.7891609 110.218134,52 107.997365,52 L4.00263463,52 Z M4.00263463,52" id="Rectangle 3" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

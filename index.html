@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/screen.css" />
+        <title>RecipeBook</title>
+    </head>
+    <body>
+        <div id="app">
+            <div id="full-page">
+                <svg id="app-icon" width="500px" height="500px" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                    <title>pot</title>
+                    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+                    <defs></defs>
+                    <g id="Page 1" fill="#D8D8D8" fill-rule="evenodd">
+                        <g id="Artboard 3">
+                            <path d="M250,500 C388.071194,500 500,388.071194 500,250 C500,111.928806 388.071194,0 250,0 C111.928806,0 0,111.928806 0,250 C0,388.071194 111.928806,500 250,500 Z M250,500" id="Oval 31" fill="#4A4A4A"></path>
+                            <path d="M52.9993885,223 C48.5814482,223 45,226.584935 45,230.99846 L45,255.00154 C45,259.418968 48.591272,263 52.9993885,263 L394.000611,263 C398.418552,263 402,259.415065 402,255.00154 L402,230.99846 C402,226.581032 398.408728,223 394.000611,223 L52.9993885,223 Z M52.9993885,223" id="Rectangle 47" fill="#FFFFFF"></path>
+                            <path d="M132.00162,240 C127.582447,240 124,243.58429 124,248.00237 L124,346.99769 C124,367.985786 141.010707,385 161.999187,385 L364.000813,385 C384.987185,385 402,367.993804 402,346.99769 L402,248.00237 C402,243.582783 398.408925,240 393.99838,240 L132.00162,240 Z M132.00162,240" id="Rectangle 48" fill="#FFFFFF"></path>
+                            <path d="M247.994844,110 C245.788552,110 244,111.791318 244,114.003263 L244,188.996737 C244,191.207678 245.781851,193 247.994844,193 L278.005156,193 C280.211448,193 282,191.208682 282,188.996737 L282,114.003263 C282,111.792322 280.218149,110 278.005156,110 L247.994844,110 Z M247.994844,110" id="Rectangle 49" fill="#FFFFFF"></path>
+                            <path d="M179.994844,110 C177.788552,110 176,111.791318 176,114.003263 L176,188.996737 C176,191.207678 177.781851,193 179.994844,193 L210.005156,193 C212.211448,193 214,191.208682 214,188.996737 L214,114.003263 C214,111.792322 212.218149,110 210.005156,110 L179.994844,110 Z M179.994844,110" id="Rectangle 49" fill="#FFFFFF"></path>
+                            <path d="M315.994844,110 C313.788552,110 312,111.791318 312,114.003263 L312,188.996737 C312,191.207678 313.781851,193 315.994844,193 L346.005156,193 C348.211448,193 350,191.208682 350,188.996737 L350,114.003263 C350,111.792322 348.218149,110 346.005156,110 L315.994844,110 Z M315.994844,110" id="Rectangle 49" fill="#FFFFFF"></path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div id="full-page-right"></div>
+            <script id="bottom-panel-template" type="text/x-handlebars-template">
+              <div class="icon-bar">
+                <div class="expand"></div>
+              </div>
+              <input type="text">
+              <div id="recipe-list-wrapper">
+                <div id="recipe-list"></div>
+              </div>
+              <div id="recipe-panel-progress"></div>
+            </script>
+            <script id="recipe-template" type="text/x-handlebars-template">
+                {{{ this.image }}}
+                <br>
+                <span>{{ this.name }}</span>
+            </script>
+            <script id="full-recipe-template" type="text/x-handlebars-template">
+                <div class="recipe-inner">
+                    {{{ this.image }}}
+                    <h1>{{ this.name }}</h1>
+                    <div class="down"></div>
+                    <div class="left-col">
+                        <h2>Ingredients</h2>
+                         {{nl2br this.ingredients}}
+                        <br><br>
+                        <strong>Prep time: {{ this.prep_time }}</strong><br>
+                        <strong>Serves: {{ this.serves }}</strong>
+                    </div>
+                    <div class="right-col">
+                        <h2>Instructions</h2>
+                        <p>{{nl2br this.instructions }}</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </script>
+        </div>
+        <script type="text/javascript" src="js/cordova-2.5.0.js"></script>
+        <script type="text/javascript" src="js/vendor/jquery.js"></script>
+        <script type="text/javascript" src="js/vendor/underscore.js"></script>
+        <script type="text/javascript" src="js/vendor/backbone.js"></script>
+        <script type="text/javascript" src="js/vendor/offline.js"></script>
+        <script type="text/javascript" src="js/vendor/handlebars.js"></script>
+        <script type="text/javascript" src="js/vendor/iscroll.js"></script>
+        <script type="text/javascript" src="js/vendor/fastclick.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </body>
+</html>
